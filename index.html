@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="home.js"></script>
+    <title>Copon-page-with-background-changebility</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>  <div class="WStatus">
+        <p id="out">hi </p>
+        <p id="weather">Love you </p>
+        </div>
+
+    <div class="changMode"><button onclick="changMode()" >Click to change background</button></div>
+    <div id="couponButton" class="couponButton"> <button  onclick="loadCoupon()">Click to reopen coupon card</button></div>
+
+    <div class="mainDiv" id="mainDiv">
+
+    
+        <script>
+            window.onload= loadCoupon();
+            window.onload= geolocation();
+        </script>
+            
+            <button id="close" onclick="couponButton(), closeItem()">&times;</button>
+            <img class="logo" src="images/logo.svg" alt="image">
+            <p class="premium">get <a href="#">premium</a></p>
+            <div class="off">
+                <div>30% OFF</div>
+            </div>
+            <div class="use">use this coupon code</div>
+            <div class="code">
+                <div>45$CpM</div>
+            
+    
+
+        </div>
+
+    </div>
+</body>
+
+</html>

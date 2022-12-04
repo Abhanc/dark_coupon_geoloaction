@@ -1,0 +1,102 @@
+
+body{
+    text-align:center;
+    background-color:#0c111b;
+    color:white;
+
+}
+.newBackground{
+    background-color: white;
+    color:rgb(85, 85, 85);
+}
+.changMode button{
+    background-color:blue;
+    color:white;
+    cursor:pointer;
+}
+.changMode button:hover{
+    background-color:rgb(33, 33, 141);
+}
+.changMode{
+    position: absolute;
+    top:20px;
+    left:10px;
+}
+.mainDiv{
+    position:relative;
+    background-image:url('images/background-image.webp') ;
+    background-position:left;
+    background-size:cover;
+    width:400px; 
+    height:250px;
+    margin:auto;
+    margin-top:100px;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    border: solid grey 1px;
+    
+}
+.logo{
+     padding-top:15px;
+}
+.premium a{
+    color:yellow;
+    text-decoration:none;
+    cursor:pointer;
+
+}
+#close{
+    position:absolute;
+    right:0px;
+}
+
+.off{
+    margin: auto;
+    width: 159px;
+    height: 34px;
+    border: solid white 2px;
+    color: yellow;
+    position: absolute;
+    left: 118px;
+    bottom: 109px;
+    border-radius: 34px;
+    border-style: dashed;
+    font-size: 30px;
+}
+
+
+.code{
+    width: 81px;
+    height: 21px;
+    position: absolute;
+    left: 161px;
+    bottom: 30px;
+    border: solid white 2px;
+    border-style: dashed;
+    border-radius: 18px;
+    background-color: yellowgreen;
+}
+.use{
+    position: absolute;
+    bottom: 28%;
+    left: 29%;
+}
+.couponButton button {
+    background-color:blue;
+    color:white;
+    cursor:pointer;
+
+}
+.couponButton{
+    padding-top:100px;
+}
+.couponButton button:hover{
+    background-color:rgb(33, 33, 141);
+}
+
+.WStatus{
+    position:absolute;
+    right:20px;
+    color:yellow;
+    text-align:justify;
+}
