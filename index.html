@@ -11,8 +11,11 @@
 </head>
 
 <body>  <div class="WStatus">
-        <p id="out"> </p>
-        <p id="weather"> </p>
+        <p id="latitude"></p>
+        <p id="longitude"></p>
+        <p id="weather"></p>
+        <p id="temperature"></p>
+
         </div>
 
     <div class="changMode"><button onclick="changMode()" >Click to change background</button></div>
@@ -24,6 +27,46 @@
         <script>
             window.onload= loadCoupon();
             window.onload= geolocation();
+
+            
+            let x = document.getElementById('latitude');
+            let x1 = document.getElementById('longitude');
+            let y = document.getElementById('weather');
+            let y1 = document.getElementById('temperature');
+
+            function geolocation(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showPosition)
+                }else{
+                    x.innerText = "Geo Not Supported";
+                }
+            }
+
+            function showPosition(data){
+                console.log(data);
+                let lat = data.coords.latitude;
+                let long = data.coords.longitude;
+                let out = `Latitude: ${lat} `;
+                let out1 = ` longitude:  ${long}`
+                x.textContent = out;
+                x1.textContent = out1;
+
+                const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${long}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`
+                ///api calling
+                fetch(url,{method: 'GET'})
+                //return promise
+                .then((res) => res.json())
+                //return data
+                .then((data) => {
+                    console.log(data)
+                    let city = data.city.name;
+                    let temp = data.list[0].temp.day;
+                    y.textContent = ` city: ${city} `;
+                    y1.textContent = `Temperature: ${temp} °C`;
+                })
+            }
+
+           
         </script>
             
             <button id="close" onclick="couponButton(), closeItem()">&times;</button>
